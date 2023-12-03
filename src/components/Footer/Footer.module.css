@@ -1,0 +1,51 @@
+.section-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+}
+
+.div-advantages {
+    max-width: 1800px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 7em
+}
+
+.div-advantages-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5em;
+}
+
+.div-advantages-item i{
+    font-size: 35px;
+}
+
+.div-advantages-item-title {
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.div-advantages-item-description {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.div-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+    padding: 1em;
+    background-color: gray;
+}
+
+.div-links {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 9em
+}

@@ -1,4 +1,5 @@
 .main-navigation {
+    max-width: 2400px;
     display: flex;
     justify-content: center;
     background-color: #d1d4c9;
