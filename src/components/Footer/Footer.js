@@ -31,48 +31,52 @@ const Footer = () => {
 
             <div className={style["div-footer"]}>
                 <div className={style["div-links"]}>
-                    <ul>
-                        <ul>INFORMATION
+                    <div>
+                        <h3 className={style["div-links-title"]}>INFORMATION</h3>
+                        <ul className={style["div-links-information"]}>
                             <li><a>About us</a></li>
                             <li><a>Policy privacy</a></li>
                             <li><a>Delivery</a></li>
                             <li><a>Regulations</a></li>
                         </ul>
-                    </ul>
+                    </div>
 
-                    <ul>
-                        <ul>ADDITIONAL INFO
+
+                    <div>
+                        <h3 className={style["div-links-title"]}>ADDITIONAL INFO</h3>
+                        <ul className={style["div-links-additional-info"]}>
                             <li><a>Warranty</a></li>
                             <li><a>Complaint</a></li>
                             <li><a>Contact us</a></li>
                         </ul>
-                    </ul>
-
-                    <ul>
-                        <ul>CONTACT
-                            <li>
+                    </div>
+                    <div>
+                        <h3 className={style["div-links-title"]}>CONTACT</h3>
+                        <ul className={style["div-links-contact"]}>
+                            <li className={style["div-links-contact-item"]}>
                                 <i class="fa-solid fa-phone"></i>
                                 <p>+48 12 312 53 86</p>
                             </li>
-                            <li>
+                            <li className={style["div-links-contact-item"]}>
                                 <i class="fa-solid fa-envelope"></i>
                                 <p>4x4-friends@abv.bg</p>
                             </li>
-                            <li>Mon - Fri 8:00 - 16:00</li>
+                            <li>Mon - Fri / 8:00 - 16:00</li>
                         </ul>
-                    </ul>
-
-                    <ul>
-                        <ul>SOCIAL
+                    </div>
+                    <div>
+                        <h3 className={style["div-links-title"]}>SOCIAL</h3>
+                        <ul className={style["div-links-social"]}>
                             <li><i class="fa-brands fa-facebook"></i></li>
                             <li><i class="fa-brands fa-instagram"></i></li>
                             <li><i class="fa-brands fa-youtube"></i></li>
                             <li><i class="fa-brands fa-discord"></i></li>
                         </ul>
-                    </ul>
+                    </div>
+
                 </div>
                 <div className={style["div-rights-reserved"]}>
-                    <p>© 2023 - Offroad-Express</p>
+                    <p>© 2023 - 4x4 Friends</p>
                 </div>
             </div>
         </footer>
