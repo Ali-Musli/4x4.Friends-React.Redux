@@ -4,35 +4,36 @@ import style from "./Maps.module.css"
 const Maps = () => {
     return (
         <sectoin className={style["section-main"]}>
+            <h2 className={style["section-main-title"]}>Our Favorite Trail Guides Across the Country</h2>
             <div>
-                <Carousel id={style["carusel"]} fade>
+                <Carousel fade="true" id={style["carusel"]}>
                     <Carousel.Item id={style["carusel-item"]}>
-                        <img className={style["carusel-item-img"]} src='https://i.stack.imgur.com/3FEP9.png'></img>
+                        <img className={style["carusel-item-img"]} src="map-1.png"></img>
                         <div className={style["carusel-item-content"]}>
-                            <p>Level: 5 / 10</p>
-                            <p>Distance: 15km</p>
+                            <p>Level: 6 / 10</p>
+                            <p>Distance: 90km</p>
                             <p>Type: Forest</p>
-                            <p>Region: Kovachevica</p>
+                            <p>Region: Blagoevgrad</p>
                             <button className={style["carusel-item-content-button"]}>Details</button>
                         </div>
                     </Carousel.Item>
                     <Carousel.Item id={style["carusel-item"]}>
-                        <img className={style["carusel-item-img"]} src='https://i.ytimg.com/vi/tlmUJ8-KQ5o/maxresdefault.jpg'></img>
+                        <img className={style["carusel-item-img"]} src='map-2.png'></img>
                         <div className={style["carusel-item-content"]}>
-                            <p>Level: 5 / 10</p>
-                            <p>Distance: 15km</p>
+                            <p>Level: 4 / 10</p>
+                            <p>Distance: 30km</p>
                             <p>Type: Forest</p>
-                            <p>Region: Kovachevica</p>
+                            <p>Region: Pazardzhik</p>
                             <button className={style["carusel-item-content-button"]}>Details</button>
                         </div>
                     </Carousel.Item>
                     <Carousel.Item id={style["carusel-item"]}>
-                        <img className={style["carusel-item-img"]} src='https://ghacks.net/wp-content/uploads/2012/03/yahoo-driving-directions.jpg'></img>
+                        <img className={style["carusel-item-img"]} src='map-3.png'></img>
                         <div className={style["carusel-item-content"]}>
-                            <p>Level: 5 / 10</p>
-                            <p>Distance: 15km</p>
+                            <p>Level: 6.5 / 10</p>
+                            <p>Distance: 40km</p>
                             <p>Type: Forest</p>
-                            <p>Region: Kovachevica</p>
+                            <p>Region: Peshtera</p>
                             <button className={style["carusel-item-content-button"]}>Details</button>
                         </div>
                     </Carousel.Item>
