@@ -45,11 +45,21 @@
 }
 
 #carusel {
+    background-image: url("https://www.topgear.com/sites/default/files/2021/09/18%20Mercedes%20G-Class%20400%20d.jpg");
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size:125%;
     background-color: #d1d4c9;
     display: flex;
     justify-content: center;
-    max-width: 1800px;
+    max-width: 1700px;
     padding: 2em;
+    transition: 2s;
+}
+
+#carusel:hover {
+    background-size:105%;
+    transition: 1s;
 }
 
 #carusel-item {
@@ -65,16 +75,19 @@
 }
 
 .carusel-item-content {
+    width: 300px;
     margin-left: 7em;
-    transition: 10s;
-    align-self: center;
     display: flex;
     flex-direction: column;
+    padding: 6em 1em 6em 3em;
     row-gap: 1em;
+    background-color: rgba(0, 0, 0, 0.618);
+    border-radius: 10px;
 
 }
 
 .carusel-item-content p {
+    color: #ffffff;
     text-align: left;
     font-size: 20px;
     font-weight: 300;
@@ -83,7 +96,10 @@
 .carusel-item-content-button {
     border-style: none;
     width: 150px;
-    height: 30px;
+    height: 40px;
     border-radius: 15px;
     margin-top: 15px;
+    font-size: 18px;
+    background-color: #556e53;
+    color: #ffffff;
 }
