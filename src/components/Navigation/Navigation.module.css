@@ -1,8 +1,8 @@
 .main-navigation {
-    max-width: 2400px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #d1d4c9;
+    background-color: #29435c;
     padding: 1em;
 }
 
@@ -13,6 +13,8 @@
 
 .ul-list-item {
     font-size: 19px;
+    font-weight: 200;
+    color: #ffffff;
 }
 
 .ul-list-item a:hover {

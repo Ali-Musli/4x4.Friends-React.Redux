@@ -1,5 +1,5 @@
 .heroSection {
-    max-width: 2400px;
+    max-width: 1700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,14 +14,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #556e53;
+    background-color: #d1d4c9;
     padding: 1em;
+    /* padding: 1em;
     border-radius: 10px;
-    max-width: 1228px;
+    max-width: 1228px; */
 }
 
 .heroSection-content:hover {
-    background-color: #556e53aa;
+    background-color: #556e53ed;
     box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.69);
     -webkit-box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.69);
     -moz-box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.69);

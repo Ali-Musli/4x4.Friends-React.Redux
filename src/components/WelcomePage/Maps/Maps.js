@@ -40,7 +40,7 @@ const Maps = () => {
                 </Carousel>
             </div>
 
-            <button>All Maps</button>
+            <button className={style["section-main-view-all-maps"]}>All Maps</button>
         </sectoin>
     );
 }

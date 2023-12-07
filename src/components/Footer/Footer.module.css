@@ -45,7 +45,7 @@
     align-items: center;
     row-gap: 2em;
     padding: 1em;
-    background-color: gray;
+    background-color: #29435c;
 }
 
 .div-links {
@@ -56,6 +56,7 @@
 }
 
 .div-links-title {
+    color: #ffffff;
     font-size: 25px;
     font-weight: 300;
     margin-bottom: 15px;
@@ -72,14 +73,18 @@
     padding-left: 10px;
 }
 
+.div-links-information li{
+    color: #ffffff;
+}
+
 .div-links-information li a{
+    font-size: 18px;
     font-weight: 200;
 }
 
 .div-links-information li a:hover {
     padding-left: 8px;
     transition: 0.3s;
-    font-weight: 400;
     cursor: pointer;
 }
 
@@ -90,14 +95,18 @@
     padding-left: 10px;
 }
 
+.div-links-additional-info li {
+    color: #ffffff;
+}
+
 .div-links-additional-info li a {
+    font-size: 18px;
     font-weight: 200;
 }
 
 .div-links-additional-info li a:hover{
     padding-left: 8px;
     transition: 0.3s;
-    font-weight: 400;
     cursor: pointer;
 }
 
@@ -113,7 +122,19 @@
     column-gap: 10px;
 }
 
+.div-links-contact-item i {
+    color: #ffffff;
+}
+
 .div-links-contact-item p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.div-links-contact-item-range {
+    color: #ffffff;
+    font-size: 18px;
     font-weight: 200;
 }
 
@@ -125,4 +146,5 @@
 
 .div-links-social li i{
     font-size: 22px;
+    color: #ffffff;
 }

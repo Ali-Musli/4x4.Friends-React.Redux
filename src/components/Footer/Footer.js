@@ -61,7 +61,7 @@ const Footer = () => {
                                 <i class="fa-solid fa-envelope"></i>
                                 <p>4x4-friends@abv.bg</p>
                             </li>
-                            <li>Mon - Fri / 8:00 - 16:00</li>
+                            <li className={style["div-links-contact-item-range"]}>Mon - Fri / 8:00 - 16:00</li>
                         </ul>
                     </div>
                     <div>
