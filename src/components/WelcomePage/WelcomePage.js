@@ -1,6 +1,6 @@
 import Benefits from "./Benefits/Benefits";
+import Cars from "./Cars/Cars";
 import Hero from "./Hero/Hero";
-import LastAdded from "./LastAdded/LastAdded";
 import Maps from "./Maps/Maps";
 import style from "./WelcomePage.module.css"
 
@@ -10,7 +10,7 @@ const WelcomePage = () => {
             <Hero />
             <Benefits />
             <Maps />
-            <LastAdded />
+            <Cars />
         </div>
     );
 }

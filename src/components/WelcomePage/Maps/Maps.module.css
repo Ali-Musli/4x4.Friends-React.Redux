@@ -27,7 +27,7 @@
 .section-main-view-all-maps {
     border-style: none;
     width: 190px;
-    height: 60px;
+    height: 50px;
     background-color: #29435c;
     border-radius: 10px;
     font-size: 18px;
@@ -102,4 +102,9 @@
     font-size: 18px;
     background-color: #556e53;
     color: #ffffff;
+}
+
+.carusel-item-content-button:hover{
+    background-color: #ffffff;
+    color: #556e53;
 }
