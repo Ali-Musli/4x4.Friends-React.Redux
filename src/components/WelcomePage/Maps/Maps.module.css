@@ -58,8 +58,8 @@
 }
 
 #carusel:hover {
-    background-size:105%;
-    transition: 1s;
+    background-size:120%;
+    transition: 2s;
 }
 
 #carusel-item {

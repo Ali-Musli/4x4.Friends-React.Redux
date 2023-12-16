@@ -3,6 +3,7 @@ import style from "./Cars.module.css";
 const Cars = () => {
     return (
         <section className={style["section-cars"]}>
+            <h1 className={style["title"]}>Last Added Trucks</h1>
             <div className={style["item"]}>
                 <img className={style["item-img"]} src="https://www.coastaloffroad.com/wp-content/uploads/2022/12/1-8.jpeg" alt="Nissan Patrol" />
                 <div className={style["item-content"]}>
@@ -105,7 +106,7 @@ const Cars = () => {
                             <p>Plovdiv</p>
                         </div>
                         <div className={style["item-content-info-price"]}>
-                            <p>25000 Lv.</p>
+                            <p>18000 Lv.</p>
                         </div>
                     </div>
                 </div>
@@ -159,7 +160,7 @@ const Cars = () => {
                             <p>Plovdiv</p>
                         </div>
                         <div className={style["item-content-info-price"]}>
-                            <p>25000 Lv.</p>
+                            <p>30000 Lv.</p>
                         </div>
                     </div>
                 </div>
