@@ -54,11 +54,11 @@ const Footer = () => {
                         <h3 className={style["div-links-title"]}>CONTACT</h3>
                         <ul className={style["div-links-contact"]}>
                             <li className={style["div-links-contact-item"]}>
-                                <i class="fa-solid fa-phone"></i>
+                                <i className="fa-solid fa-phone"></i>
                                 <p>+48 12 312 53 86</p>
                             </li>
                             <li className={style["div-links-contact-item"]}>
-                                <i class="fa-solid fa-envelope"></i>
+                                <i className="fa-solid fa-envelope"></i>
                                 <p>4x4-friends@abv.bg</p>
                             </li>
                             <li className={style["div-links-contact-item-range"]}>Mon - Fri / 8:00 - 16:00</li>
@@ -67,10 +67,10 @@ const Footer = () => {
                     <div>
                         <h3 className={style["div-links-title"]}>SOCIAL</h3>
                         <ul className={style["div-links-social"]}>
-                            <li><i class="fa-brands fa-facebook"></i></li>
-                            <li><i class="fa-brands fa-instagram"></i></li>
-                            <li><i class="fa-brands fa-youtube"></i></li>
-                            <li><i class="fa-brands fa-discord"></i></li>
+                            <li><i className="fa-brands fa-facebook"></i></li>
+                            <li><i className="fa-brands fa-instagram"></i></li>
+                            <li><i className="fa-brands fa-youtube"></i></li>
+                            <li><i className="fa-brands fa-discord"></i></li>
                         </ul>
                     </div>
 

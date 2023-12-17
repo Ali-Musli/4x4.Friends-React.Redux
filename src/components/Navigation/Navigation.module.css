@@ -17,7 +17,12 @@
     color: #ffffff;
 }
 
+.ul-list-item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .ul-list-item a:hover {
     cursor: pointer;
-    text-decoration: underline;
+    color: black;
 }

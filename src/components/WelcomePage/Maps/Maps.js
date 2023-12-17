@@ -3,7 +3,7 @@ import style from "./Maps.module.css"
 
 const Maps = () => {
     return (
-        <sectoin className={style["section-main"]}>
+        <section className={style["section-main"]}>
             <h2 className={style["section-main-title"]}>Our Favorite Trail Guides Across the Country</h2>
             <div>
                 <Carousel fade="true" id={style["carusel"]}>
@@ -41,7 +41,7 @@ const Maps = () => {
             </div>
 
             <button className={style["section-main-view-all-maps"]}>All Maps</button>
-        </sectoin>
+        </section>
     );
 }
 

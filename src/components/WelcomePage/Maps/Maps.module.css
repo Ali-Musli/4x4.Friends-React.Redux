@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3em;
 }
 
 .section-main-title {
@@ -45,10 +46,10 @@
 }
 
 #carusel {
-    background-image: url("https://www.topgear.com/sites/default/files/2021/09/18%20Mercedes%20G-Class%20400%20d.jpg");
+    background-image: url("https://www.onxmaps.com/wp-content/uploads/sites/7/2022/07/BAN21_8986_web.jpg");
     background-repeat: no-repeat;
-    background-position: 30%;
-    background-size:125%;
+    background-position: 10%;
+    background-size:115%;
     background-color: #d1d4c9;
     display: flex;
     justify-content: center;
@@ -79,7 +80,9 @@
     margin-left: 7em;
     display: flex;
     flex-direction: column;
-    padding: 6em 1em 6em 3em;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
     row-gap: 1em;
     background-color: rgba(0, 0, 0, 0.618);
     border-radius: 10px;
