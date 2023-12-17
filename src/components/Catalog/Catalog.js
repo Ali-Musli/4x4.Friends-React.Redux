@@ -1,4 +1,5 @@
 import Car from "../WelcomePage/Cars/Car/Car";
+import style from "./Catalog.module.css";
 
 const cars = [
     {
@@ -160,7 +161,7 @@ const cars = [
 
 const Catalog = () => {
     return (
-        <section>
+        <section className={style["section-catalog"]}>
             <aside></aside>
             <div>
                 {
