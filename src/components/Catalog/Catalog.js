@@ -1,4 +1,4 @@
-import Car from "../WelcomePage/Cars/Car/Car";
+import CatalogItem from "./CatalogItem/CatalogItem";
 import style from "./Catalog.module.css";
 
 const cars = [
@@ -162,12 +162,12 @@ const cars = [
 const Catalog = () => {
     return (
         <section className={style["section-catalog"]}>
-            <aside></aside>
-            <div>
+            <input className={style["search"]} placeholder="Search..."></input>
+            <div className={style["items"]}>
                 {
                     cars.map((item) => {
                         return (
-                            <Car key={item.id} {...item} />
+                            <CatalogItem key={item.id} {...item} />
                         )
                     })
                 }
