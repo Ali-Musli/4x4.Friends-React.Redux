@@ -8,12 +8,12 @@
 }
 
 .heroSection-img {
-    max-width: 100%;
+    width: 1400px;
 }
 
 .heroSection-content {
     position: absolute;
-    top: 540px;
+    top: 600px;
     width: 1200px;
     display: flex;
     flex-direction: column;
