@@ -1,5 +1,6 @@
 import CatalogItem from "./CatalogItem/CatalogItem";
 import style from "./Catalog.module.css";
+import Paginationn from "../Pagination/Pagination";
 
 const cars = [
     {
@@ -172,6 +173,7 @@ const Catalog = () => {
                     })
                 }
             </div>
+            <Paginationn />
         </section>
     )
 }
