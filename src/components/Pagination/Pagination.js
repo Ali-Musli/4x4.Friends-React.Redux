@@ -2,7 +2,7 @@ import Pagination from 'react-bootstrap/Pagination';
 
 function Paginationn() {
   return (
-    <Pagination>
+    <Pagination style={{"z-index": 1}}>
       <Pagination.First />
       <Pagination.Prev />
       <Pagination.Item>{1}</Pagination.Item>
