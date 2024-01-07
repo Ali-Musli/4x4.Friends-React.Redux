@@ -40,6 +40,7 @@
 
 .item-content-resume {
     display: flex;
+    column-gap: 20px;
     justify-content: space-between;
 }
 
@@ -144,6 +145,13 @@
     margin-block: 1em;
 }
 
+.popup-summary-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
 .popup-summary-title {
     font-size: 22px;
 }
@@ -162,7 +170,8 @@
 
 .popup-summary-price p {
     font-size: 22px;
-    font-weight: 300;
+    font-weight: 600;
+    color: rgba(51, 51, 176, 0.819);
 }
 
 .popup-content {
@@ -219,7 +228,33 @@
     margin-bottom: 10px;
 }
 
-.item-popup-img {
-    width: 500px;
-    height: 400px;
+.popup-contact {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    margin-block: 1em;
+}
+
+.popup-contact-location, .popup-contact-phone {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.popup-contact-location i,  .popup-contact-phone i{
+    font-size: 20px;
+}
+
+.popup-contact-location h3, .popup-contact-phone h3{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.popup-contact-location p, .popup-contact-phone p {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(51, 51, 176, 0.819);
 }

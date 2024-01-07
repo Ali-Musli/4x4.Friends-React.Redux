@@ -121,10 +121,30 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                                     <Gallery items={images} showIndex="true" showFullscreenButton={false} />
                                 </div>
                                 <div className={style["popup-summary"]}>
-                                    <h2 className={style["popup-summary-title"]}>{title}</h2>
+                                    <div className={style['popup-summary-summary']}>
+                                        <h2 className={style["popup-summary-title"]}>{title}</h2>
+                                        <div className={style["item-content-resume"]}>
+                                            <div className={style["item-content-resume-item"]}>
+                                                <i className="fa-solid fa-road"></i>
+                                                <p>{mileage} km</p>
+                                            </div>
+                                            <div className={style["item-content-resume-item"]}>
+                                                <i className="fa-solid fa-calendar-days"></i>
+                                                <p>{carData}</p>
+                                            </div>
+                                            <div className={style["item-content-resume-item"]}>
+                                                <i className="fa-solid fa-horse-head"></i>
+                                                <p>{horsePower} hp</p>
+                                            </div>
+                                            <div className={style["item-content-resume-item"]}>
+                                                <i className="fa-solid fa-gas-pump"></i>
+                                                <p>{gas}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div className={style["popup-summary-price"]}>
                                         <h3>Цена:</h3>
-                                        <p>{price}</p>
+                                        <p>{price} Лв.</p>
                                     </div>
                                 </div>
                                 <div className={style["popup-content"]}>
@@ -143,6 +163,18 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                                                 })
                                             }
                                         </ul>
+                                    </div>
+                                </div>
+                                <div className={style["popup-contact"]}>
+                                    <div className={style["popup-contact-phone"]}>
+                                        <i class="fa-solid fa-phone"></i>
+                                        <h3>Контакт:</h3>
+                                        <p>+369 444 9450</p>
+                                    </div>
+                                    <div className={style["popup-contact-location"]}>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <h3>Локация:</h3>
+                                        <p>{location}</p>
                                     </div>
                                 </div>
                             </div>
