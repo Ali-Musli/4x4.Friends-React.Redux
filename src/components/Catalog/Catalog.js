@@ -10,7 +10,7 @@ const cars = [
         carData: "06 / 2009",
         horsePower: "190",
         gas: "Diesel",
-        extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
+        extras: ["4X4", "Navigation", "Rain Sensor", "Suspension Lift Kit", "Led Bar", "Four-Wheel Drive (4WD) or All-Wheel Drive (AWD)", "Off-Road Suspension","Suspension Lift Kit", "Led Bar", "Four-Wheel Drive (4WD) or All-Wheel Drive (AWD)",],
         location: "Plovdiv",
         price: "25000",
         id: "1",

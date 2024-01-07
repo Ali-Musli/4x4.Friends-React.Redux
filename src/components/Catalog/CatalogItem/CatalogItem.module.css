@@ -55,6 +55,7 @@
 .item-content-extras {
     display: flex;
     justify-content: space-between;
+    overflow-x: scroll;
 }
 
 .item-content-extras-item {
@@ -63,10 +64,11 @@
     justify-content: center;
     background-color: #152a38;
     color: #ffffff;
-    width: 100px;
+    min-width: 90px;
     height: 30px;
     border-radius: 10px;
     margin-bottom: 3em;
+    padding: 5px;
 }
 
 .item-content-extras-item p {
@@ -124,23 +126,53 @@
     overflow: scroll;
     width: 100%;
     height: 100%;
+    padding: 10px;
 }
 
 .popup-gallery {
     width: 100%;
     /* padding: 1em; */
-    background-color: #556e5362;
+    background-color: #d1d4c9;
+}
+
+.popup-summary {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    margin-block: 1em;
+}
+
+.popup-summary-title {
+    font-size: 22px;
+}
+
+.popup-summary-price {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.popup-summary-price h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.popup-summary-price p {
+    font-size: 22px;
+    font-weight: 300;
 }
 
 .popup-content {
     display: flex;
     column-gap: 20px;
-    padding: 1em;
 }
 
 .popup-content-description {
     flex: 60%;
-    height: 300px;
+    height: 400px;
     overflow: scroll;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -152,7 +184,7 @@
     font-size: 22px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .popup-content-description p {
@@ -161,9 +193,30 @@
 
 .popup-content-extras {
     flex: 40%;
+    height: 400px;
     background-color: #f2f2f2;
     border-radius: 10px;
     padding: 10px;
+    overflow: scroll;
+}
+
+.popup-content-extras h3{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.popup-content-extras ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.popup-content-extras ul li {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .item-popup-img {

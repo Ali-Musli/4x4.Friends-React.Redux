@@ -62,9 +62,9 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
     const customStyles = {
         // Customize image styles
         galleryImage: {
-          objectFit: 'cover',
-          height: '400px',
-          borderRadius: '8px',
+            objectFit: 'cover',
+            height: '400px',
+            borderRadius: '8px',
         },
     }
     return (
@@ -92,7 +92,7 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                 </div>
                 <div className={style["item-content-extras"]}>
                     {
-                        extras.map((item) => {
+                        extras.slice(0, 5).map((item) => {
 
                             return (
                                 <div key={item} className={style["item-content-extras-item"]}>
@@ -120,19 +120,29 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                                 <div className={style["popup-gallery"]}>
                                     <Gallery items={images} showIndex="true" showFullscreenButton={false} />
                                 </div>
+                                <div className={style["popup-summary"]}>
+                                    <h2 className={style["popup-summary-title"]}>{title}</h2>
+                                    <div className={style["popup-summary-price"]}>
+                                        <h3>Цена:</h3>
+                                        <p>{price}</p>
+                                    </div>
+                                </div>
                                 <div className={style["popup-content"]}>
                                     <div className={style['popup-content-description']}>
                                         <h3>Описание</h3>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                                     </div>
                                     <div className={style["popup-content-extras"]}>
-                                        {
-                                            extras.map((extra) => {
-                                                return (
-                                                    <p>{extra}</p>
-                                                )
-                                            })
-                                        }
+                                        <h3>Екстри</h3>
+                                        <ul className={style['extras-list']}>
+                                            {
+                                                extras.map((extra) => {
+                                                    return (
+                                                        <li>{extra}</li>
+                                                    )
+                                                })
+                                            }
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
