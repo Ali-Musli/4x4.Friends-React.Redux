@@ -1,11 +1,14 @@
-import { all, put, takeLatest } from '@redux-saga/core/effects'
+import { all, put, call, takeLatest } from '@redux-saga/core/effects'
 import { trucksSlice } from '../reducers/trucks';
-import { trucks } from '../constants/trucks'
+import { trucks } from '../constants/trucks';
+import { getAll } from '../services/trucksService';
 
 function* onFetchTrucks() {
-    try{
-        yield put(trucksSlice.actions.setTrucks(trucks))
-    } catch(error) {
+    try {
+        const result = yield call(getAll)
+
+        yield put(trucksSlice.actions.setTrucks(result))
+    } catch (error) {
         console.log(error);
     }
 }

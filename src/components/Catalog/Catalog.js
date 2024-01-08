@@ -9,7 +9,6 @@ import { useReduxState } from "../../hooks/useReduxState";
 const Catalog = () => {
     const getTrucks = useReduxAction(trucksSlice.actions.fetchTrucks);
     const trucks = useReduxState((state) => state.trucks.trucks);
-    console.log(trucks);
 
     useEffect(() => {
         getTrucks()
