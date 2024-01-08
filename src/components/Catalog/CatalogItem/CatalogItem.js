@@ -1,64 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Popup from "../../Popup/Popup";
 import style from "./CatalogItem.module.css";
 import Gallery from "react-image-gallery";
 import 'react-image-gallery/styles/css/image-gallery.css'
 import PopupDetails from "./PopupDetails/PopupDetails";
+import { useReduxAction } from "../../../hooks/useReduxAction";
+import { trucksSlice } from "../../../reducers/trucks";
 
-const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears }) => {
-    const data = {imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears}
-    const [isPopupOpen, setPopupOpen] = useState(false);
-
-    const openPopup = () => {
-        setPopupOpen(true);
-    };
-
-    const closePopup = () => {
-        setPopupOpen(false);
-    };
-
-    const images = [
-        {
-            original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_2s.jpg",
-            thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_2s.jpg",
-            description: title,
-            originalHeight: "600px",
-        },
-
-        {
-            original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_vU.jpg",
-            thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_vU.jpg",
-            description: title,
-            originalHeight: "600px"
-        },
-
-        {
-            original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_Ee.jpg",
-            thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_Ee.jpg",
-            description: title,
-            originalHeight: "600px"
-        },
-
-        {
-            original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_8x.jpg",
-            thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_8x.jpg",
-            description: title,
-            originalHeight: "600px"
-        },
-
-        {
-            original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_nM.jpg",
-            thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_nM.jpg",
-            description: title,
-            originalHeight: "600px"
-        },
-        {
-            original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_IR.jpg",
-            thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_nM.jpg",
-            description: title,
-            originalHeight: "600px"
-        },
-    ];
+const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id }) => {
+    const data = {imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id};
 
     return (
         <div className={style["item"]}>

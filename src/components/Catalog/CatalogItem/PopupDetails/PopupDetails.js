@@ -3,12 +3,18 @@ import Gallery from "react-image-gallery";
 import 'react-image-gallery/styles/css/image-gallery.css';
 import style from './PopupDetails.module.css'
 import { useState } from "react";
+import { useReduxAction } from "../../../../hooks/useReduxAction";
+import { trucksSlice } from "../../../../reducers/trucks";
 
-const PopupDetails = ({imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears }) => {
+const PopupDetails = ({imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id }) => {
     const [isPopupOpen, setPopupOpen] = useState(false);
+    const fetchTruckById = useReduxAction(trucksSlice.actions.fetchTruckById)
 
     const openPopup = () => {
         setPopupOpen(true);
+        console.log(imgUrl);
+        fetchTruckById(_id);
+
     };
 
     const closePopup = () => {
@@ -16,6 +22,12 @@ const PopupDetails = ({imgUrl, title, price, mileage, location, horsePower, gas,
     };
 
     const images = [
+        {
+            original: imgUrl,
+            thumbnail: imgUrl,
+            description: title,
+            originalHeight: "600px",
+        },
         {
             original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_2s.jpg",
             thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_2s.jpg",

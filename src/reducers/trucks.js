@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    trucks: []
+    trucks: [],
+    truck: {}
 };
 
 export const trucksSlice = createSlice({
@@ -11,6 +12,10 @@ export const trucksSlice = createSlice({
         fetchTrucks: () => {},
         setTrucks: (state, action) => {
             state.trucks = [...action.payload]
+        },
+        fetchTruckById: (state, action) => {},
+        setTruckById: (state, action) => {
+            state.truck = action.payload
         }
     }
 })
