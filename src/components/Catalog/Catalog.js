@@ -13,6 +13,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Suspension Lift Kit", "Led Bar", "Four-Wheel Drive (4WD) or All-Wheel Drive (AWD)", "Off-Road Suspension","Suspension Lift Kit", "Led Bar", "Four-Wheel Drive (4WD) or All-Wheel Drive (AWD)",],
         location: "Plovdiv",
         price: "25000",
+        gears: "Automatic",
         id: "1",
     },
 
@@ -26,6 +27,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Ruse",
         price: "18000",
+        gears: "Automatic",
         id: "2",
     },
 
@@ -39,6 +41,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Sofia",
         price: "30000",
+        gears: "Automatic",
         id: "3",
     },
 
@@ -52,6 +55,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Plovdiv",
         price: "25000",
+        gears: "Automatic",
         id: "4",
     },
 
@@ -65,6 +69,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Ruse",
         price: "18000",
+        gears: "Automatic",
         id: "5",
     },
 
@@ -78,6 +83,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Sofia",
         price: "30000",
+        gears: "Automatic",
         id: "6",
     },
 
@@ -91,6 +97,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Plovdiv",
         price: "25000",
+        gears: "Automatic",
         id: "7",
     },
 
@@ -104,6 +111,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Ruse",
         price: "18000",
+        gears: "Automatic",
         id: "8",
     },
 
@@ -117,6 +125,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Sofia",
         price: "30000",
+        gears: "Automatic",
         id: "9",
     },
 
@@ -130,6 +139,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Plovdiv",
         price: "25000",
+        gears: "Automatic",
         id: "10",
     },
 
@@ -143,6 +153,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Ruse",
         price: "18000",
+        gears: "Automatic",
         id: "11",
     },
 
@@ -156,6 +167,7 @@ const cars = [
         extras: ["4X4", "Navigation", "Rain Sensor", "Bluetooth", "Led Bar"],
         location: "Sofia",
         price: "30000",
+        gears: "Automatic",
         id: "12",
     }
 ]

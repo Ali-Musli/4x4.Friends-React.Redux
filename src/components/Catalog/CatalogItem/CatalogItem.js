@@ -3,8 +3,10 @@ import Popup from "../../Popup/Popup";
 import style from "./CatalogItem.module.css";
 import Gallery from "react-image-gallery";
 import 'react-image-gallery/styles/css/image-gallery.css'
+import PopupDetails from "./PopupDetails/PopupDetails";
 
-const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras }) => {
+const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears }) => {
+    const data = {imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears}
     const [isPopupOpen, setPopupOpen] = useState(false);
 
     const openPopup = () => {
@@ -58,21 +60,16 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
         },
     ];
 
-
-    const customStyles = {
-        // Customize image styles
-        galleryImage: {
-            objectFit: 'cover',
-            height: '400px',
-            borderRadius: '8px',
-        },
-    }
     return (
         <div className={style["item"]}>
             <img className={style["item-img"]} src={imgUrl} alt={title} />
             <div className={style["item-content"]}>
                 <h2 className={style["item-content-title"]}>{title}</h2>
                 <div className={style["item-content-resume"]}>
+                    <div className={style["item-content-resume-item"]}>
+                        <i class="fa-solid fa-gears"></i>
+                        <p>{gears}</p>
+                    </div>
                     <div className={style["item-content-resume-item"]}>
                         <i className="fa-solid fa-road"></i>
                         <p>{mileage} km</p>
@@ -113,7 +110,8 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                     <div className={style["item-content-info-price"]}>
                         <p>{price} Lv.</p>
                     </div>
-                    <div className={style["item-popup"]}>
+                    <PopupDetails {...data} />
+                    {/* <div className={style["item-popup"]}>
                         <button className={style["item-popup-btn"]} onClick={openPopup}>Details</button>
                         <Popup isOpen={isPopupOpen} onClose={closePopup}>
                             <div className={style["item-popup-content"]}>
@@ -124,6 +122,10 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                                     <div className={style['popup-summary-summary']}>
                                         <h2 className={style["popup-summary-title"]}>{title}</h2>
                                         <div className={style["item-content-resume"]}>
+                                            <div className={style["item-content-resume-item"]}>
+                                                <i class="fa-solid fa-gears"></i>
+                                                <p>{gears}</p>
+                                            </div>
                                             <div className={style["item-content-resume-item"]}>
                                                 <i className="fa-solid fa-road"></i>
                                                 <p>{mileage} km</p>
@@ -179,7 +181,7 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                                 </div>
                             </div>
                         </Popup>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
