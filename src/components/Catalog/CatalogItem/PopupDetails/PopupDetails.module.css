@@ -16,11 +16,15 @@
 }
 
 .item-popup-btn {
-    background-color: rgba(128, 128, 128, 0.552);
-    width: 100px;
-    height: 40px;
+    background-color: #152a38;
+    width: 120px;
+    height: 45px;
     border-style: none;
     border-radius: 5px;
+    color: #ffffff;
+}
+
+.item-popup-btn:hover {
     color: green;
 }
 

@@ -8,7 +8,6 @@ function Paginationn() {
       <Pagination.Item>{1}</Pagination.Item>
       <Pagination.Ellipsis />
 
-      <Pagination.Item>{1}</Pagination.Item>
       <Pagination.Item>{4}</Pagination.Item>
       <Pagination.Item active>{5}</Pagination.Item>
       <Pagination.Item>{6}</Pagination.Item>
