@@ -26,7 +26,7 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                 </div>
                 <div className={style["item-content-extras"]}>
                     {
-                        extras.map((item) => {
+                        extras.slice(0,5).map((item) => {
 
                             return (
                                 <div key={item} className={style["item-content-extras-item"]}>

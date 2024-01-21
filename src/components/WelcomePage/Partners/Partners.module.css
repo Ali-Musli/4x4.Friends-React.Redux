@@ -1,12 +1,35 @@
+.section-partners {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 35px;
+    color: #29435c;
+    font-weight: 900;
+    padding-bottom: 5px;
+    border-bottom: 1.3px solid black;
+}
+
+.titile-span {
+    color: red;
+}
+
 #carousel {
-    background-color: #556e53;
-    width: 1250px;
+    width: 100%;
+    background-color: #29435c;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em 7em;
-    border-radius: 20px;
 }
 
 #carousel-item {
@@ -14,12 +37,15 @@
 }
 
 .carousel-item-div {
+    width: 1170px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
 .carousel-img {
-    width: 300px;
+    background-color: #ffffff;
+    width: 320px;
     height: 200px;
     border-radius: 20px;
 }

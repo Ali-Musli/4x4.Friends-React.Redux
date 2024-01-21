@@ -9,21 +9,17 @@
 .section-main-title {
     position: relative;
     text-transform: uppercase;
-    font-size: 35px;
-    font-weight: 400;
+    font-size: 40px;
     margin-bottom: 35px;
     color: #29435c;
+    font-weight: 900;
+    padding-bottom: 5px;
+    border-bottom: 1.3px solid black;
 }
 
-/* .section-main-title::after {
-    content: "";
-    width: 150px;
-    height: 5px;
-    background: #29435c;
-    position: absolute;
-    bottom: -8px;
-    left: 360px;
-} */
+.title-span {
+    color: red;
+}
 
 .section-main-view-all-maps {
     border-style: none;
@@ -42,25 +38,27 @@
     box-shadow: -2px 0px 11px -4px rgba(0, 0, 0, 0.76);
     -webkit-box-shadow: -2px 0px 11px -4px rgba(0, 0, 0, 0.76);
     -moz-box-shadow: -2px 0px 11px -4px rgba(0, 0, 0, 0.76);
+    border: 2px solid #29435c;
 
 }
 
 #carusel {
-    background-image: url("https://www.onxmaps.com/wp-content/uploads/sites/7/2022/07/BAN21_8986_web.jpg");
+    background-image: url("/Users/alimusli/Desktop/new project/app/public/maps/mapsBC.jpeg");
     background-repeat: no-repeat;
     background-position: 10%;
     background-size:115%;
     background-color: #d1d4c9;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     max-width: 1700px;
+    height: 700px;
     padding: 2em;
-    transition: 2s;
+    transition: 3s;
 }
 
 #carusel:hover {
-    background-size:120%;
-    transition: 2s;
+    background-size:118%;
+    transition: 3s;
 }
 
 #carusel-item {
@@ -70,14 +68,14 @@
 }
 
 .carusel-item-img {
-    width: 650px;
-    height: 400px;
+    width: 800px;
+    height: 600px;
     border-radius: 10px;
 }
 
 .carusel-item-content {
-    width: 300px;
-    margin-left: 7em;
+    width: 350px;
+    margin-left: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,4 +108,5 @@
 .carusel-item-content-button:hover{
     background-color: #ffffff;
     color: #556e53;
+    border: 2px solid #556e53;
 }

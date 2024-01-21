@@ -7,8 +7,8 @@ import PopupDetails from "./PopupDetails/PopupDetails";
 import { useReduxAction } from "../../../hooks/useReduxAction";
 import { trucksSlice } from "../../../reducers/trucks";
 
-const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id }) => {
-    const data = {imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id};
+const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id, images }) => {
+    const data = {imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id, images};
 
     return (
         <div className={style["item"]}>
