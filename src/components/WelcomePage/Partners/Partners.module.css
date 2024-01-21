@@ -1,0 +1,25 @@
+#carousel {
+    background-color: #556e53;
+    width: 1250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 7em;
+    border-radius: 20px;
+}
+
+#carousel-item {
+    padding: 1em;
+}
+
+.carousel-item-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-img {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
