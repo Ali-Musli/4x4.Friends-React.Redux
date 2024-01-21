@@ -1,0 +1,28 @@
+.main-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #29435c;
+    padding: 1em;
+}
+
+.ul-list {
+    display: flex;
+    gap: 1.5em;
+}
+
+.ul-list-item {
+    font-size: 19px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.ul-list-item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.ul-list-item a:hover {
+    cursor: pointer;
+    color: black;
+}

@@ -1,0 +1,51 @@
+.section-partners {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 35px;
+    color: #29435c;
+    font-weight: 900;
+    padding-bottom: 5px;
+    border-bottom: 1.3px solid black;
+}
+
+.titile-span {
+    color: red;
+}
+
+#carousel {
+    width: 100%;
+    background-color: #29435c;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 7em;
+}
+
+#carousel-item {
+    padding: 1em;
+}
+
+.carousel-item-div {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-img {
+    background-color: #ffffff;
+    width: 320px;
+    height: 200px;
+    border-radius: 20px;
+}
