@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Catalog from './components/Catalog/Catalog';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import store from './redux';
+import Maps from './components/Maps/Maps';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<WelcomePage />} />
           <Route path='/catalog' element={<Catalog />} />
+          <Route path='/maps' element={<Maps />} />
         </Routes>
 
         <Footer />
