@@ -2,8 +2,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
     background-color: #29435c;
     padding: 1em;
+}
+
+.navigation-img {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
 }
 
 .ul-list {
