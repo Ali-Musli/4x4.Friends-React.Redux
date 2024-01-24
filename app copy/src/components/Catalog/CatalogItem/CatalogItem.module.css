@@ -13,10 +13,12 @@
 }
 
 .item-img {
-    width: 245px;
-    height: 270px;
+    image-rendering: -webkit-optimize-contrast; 
+    width: 230px;
+    height: 290px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    object-fit: cover;
 }
 
 .item-content {

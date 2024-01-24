@@ -1,6 +1,8 @@
+import PopupDetails from "../../../Catalog/CatalogItem/PopupDetails/PopupDetails";
 import style from "./Car.module.css";
 
-const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras }) => {
+const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id, images }) => {
+    const data = { imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id, images }
     return (
         <div className={style["item"]}>
             <img className={style["item-img"]} src={imgUrl} alt={title} />
@@ -47,6 +49,7 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                     <div className={style["item-content-info-price"]}>
                         <p>{price} Lv.</p>
                     </div>
+                    <PopupDetails {...data} />
                 </div>
             </div>
         </div>

@@ -20,55 +20,7 @@ const PopupDetails = ({imgUrl, title, price, mileage, location, horsePower, gas,
     const closePopup = () => {
         setPopupOpen(false);
     };
-
-    // const images = [
-    //     {
-    //         original: imgUrl,
-    //         thumbnail: imgUrl,
-    //         description: title,
-    //         originalHeight: "600px",
-    //     },
-    //     {
-    //         original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_2s.jpg",
-    //         thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_2s.jpg",
-    //         description: title,
-    //         originalHeight: "600px",
-    //     },
-
-    //     {
-    //         original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_vU.jpg",
-    //         thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_vU.jpg",
-    //         description: title,
-    //         originalHeight: "600px"
-    //     },
-
-    //     {
-    //         original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_Ee.jpg",
-    //         thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_Ee.jpg",
-    //         description: title,
-    //         originalHeight: "600px"
-    //     },
-
-    //     {
-    //         original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_8x.jpg",
-    //         thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_8x.jpg",
-    //         description: title,
-    //         originalHeight: "600px"
-    //     },
-
-    //     {
-    //         original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_nM.jpg",
-    //         thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_nM.jpg",
-    //         description: title,
-    //         originalHeight: "600px"
-    //     },
-    //     {
-    //         original: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_IR.jpg",
-    //         thumbnail: "https://mobistatic2.focus.bg/mobile/photosmob/194/2/big1/21699446439884194_nM.jpg",
-    //         description: title,
-    //         originalHeight: "600px"
-    //     },
-    // ];
+    
     return (
         <div className={style["item-popup"]}>
             <button className={style["item-popup-btn"]} onClick={openPopup}>Details</button>
