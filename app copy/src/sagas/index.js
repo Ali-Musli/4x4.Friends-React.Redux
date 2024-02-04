@@ -1,8 +1,9 @@
 import {all, call, spawn} from '@redux-saga/core/effects';
 import trucksSaga from './trucks';
+import mapsSaga from './maps'
 
 export default function* index() {
-    const sagas = [trucksSaga];
+    const sagas = [trucksSaga, mapsSaga];
 
     yield all(
         sagas.map((saga) =>

@@ -1,7 +1,16 @@
 import Carousel from 'react-bootstrap/Carousel';
-import style from "./Maps.module.css"
+import style from "./Maps.module.css";
+
+import { useReduxAction } from "../../../hooks/useReduxAction";
+import { mapsSlice } from '../../../reducers/maps';
+import { useEffect } from 'react';
 
 const Maps = () => {
+    const getAllMaps = useReduxAction(mapsSlice.actions.fetchAllMaps);
+
+    useEffect(() => {
+        getAllMaps()
+    }, [])
     return (
         <section className={style["section-main"]}>
             <h2 className={style["section-main-title"]}>Our Favorite <spam className={style["title-span"]}>Trail Guides</spam> Across the Country</h2>
