@@ -8,6 +8,7 @@ import { useReduxState } from "../../hooks/useReduxState"
 import { useReduxAction } from '../../hooks/useReduxAction';
 import { mapsSlice } from '../../reducers/maps';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Maps() {
   const getAllMaps = useReduxAction(mapsSlice.actions.fetchAllMaps);
@@ -47,7 +48,7 @@ function Maps() {
               </Card.Body>
               <Card.Body id={style["cardBody-second"]}>
                 <Card.Text id={style["card-description"]}>{map.description}</Card.Text>
-                <Button id={style["card-btn"]} >View comments</Button>
+                <Link to={`/maps/${map._id}`} ><Button id={style["card-btn"]} >View comments</Button></Link>
               </Card.Body>
             </Card>
           </Col>

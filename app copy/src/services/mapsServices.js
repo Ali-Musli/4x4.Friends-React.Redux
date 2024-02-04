@@ -6,3 +6,10 @@ export const getAllMaps = async () => {
     
     return result;
 } 
+
+export const getMapById = async (mapId) => {
+    let result = await fetch(`${baseUrl}/${mapId}`);
+    result = await result.json();
+
+    return result;
+}

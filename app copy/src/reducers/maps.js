@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    maps: []
+    maps: [],
+    mapById: {}
 };
 
 export const mapsSlice = createSlice({
@@ -12,5 +13,9 @@ export const mapsSlice = createSlice({
         setAllMaps: (state, action) => {
             state.maps = [...action.payload]
         },
+        fetchMapById: () => {},
+        setMapById: (state, action) => {
+            state.mapById = action.payload
+        }
     }
 })
