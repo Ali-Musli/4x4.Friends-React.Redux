@@ -17,7 +17,7 @@ const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData
                 <h2 className={style["item-content-title"]}>{title}</h2>
                 <div className={style["item-content-resume"]}>
                     <div className={style["item-content-resume-item"]}>
-                        <i class="fa-solid fa-gears"></i>
+                        <i className="fa-solid fa-gears"></i>
                         <p>{gears}</p>
                     </div>
                     <div className={style["item-content-resume-item"]}>

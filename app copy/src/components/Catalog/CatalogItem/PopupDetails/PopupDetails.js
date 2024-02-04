@@ -34,7 +34,7 @@ const PopupDetails = ({imgUrl, title, price, mileage, location, horsePower, gas,
                             <h2 className={style["popup-summary-title"]}>{title}</h2>
                             <div className={style["item-content-resume"]}>
                                 <div className={style["item-content-resume-item"]}>
-                                    <i class="fa-solid fa-gears"></i>
+                                    <i className="fa-solid fa-gears"></i>
                                     <p>{gears}</p>
                                 </div>
                                 <div className={style["item-content-resume-item"]}>
@@ -80,12 +80,12 @@ const PopupDetails = ({imgUrl, title, price, mileage, location, horsePower, gas,
                     </div>
                     <div className={style["popup-contact"]}>
                         <div className={style["popup-contact-phone"]}>
-                            <i class="fa-solid fa-phone"></i>
+                            <i className="fa-solid fa-phone"></i>
                             <h3>Контакт:</h3>
                             <p>+369 444 9450</p>
                         </div>
                         <div className={style["popup-contact-location"]}>
-                            <i class="fa-solid fa-location-dot"></i>
+                            <i className="fa-solid fa-location-dot"></i>
                             <h3>Локация:</h3>
                             <p>{location}</p>
                         </div>
