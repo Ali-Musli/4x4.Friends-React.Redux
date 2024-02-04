@@ -4,6 +4,15 @@
     -moz-box-shadow: 1px -1px 19px -3px rgba(0, 0, 0, 0.7);
 }
 
+#card-img {
+    transition: transform 0.6s ease; /* Add a smooth transition effect */
+}
+
+#card-img:hover {
+    transform: scale(0.995); /* Adjust the scale factor for zoom level */
+    border-radius: 5px;
+}
+
 .section-maps {
     padding: 1em;
     z-index: 2;

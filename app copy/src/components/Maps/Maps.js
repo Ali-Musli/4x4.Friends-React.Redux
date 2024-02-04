@@ -23,7 +23,7 @@ function Maps() {
         {allMaps.map(map => (
           <Col key={map._id}>
             <Card id={style["card"]}>
-              <Card.Img variant="top" src={map.imgUrl} />
+              <Card.Img id={style["card-img"]} variant="top" src={map.imgUrl} />
               <Card.Body id={style["cardBody-first"]}>
                 <div className={style["cardBody-div"]}>
                   <div className={style["cardBody-div-item"]}>
