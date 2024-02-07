@@ -17,12 +17,14 @@
 }
 
 .content-info {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .content-info-total {
+    height: 130px;
     background-color: #29435c;
     display: flex;
     justify-content: space-evenly;
@@ -65,4 +67,15 @@
     font-weight: 300;
     border-radius: 10px;
     padding: 15px;
+    height: 260px;
+    overflow: scroll;
+}
+
+.main-comments {
+    background-color: aqua;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

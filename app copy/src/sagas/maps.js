@@ -1,6 +1,6 @@
 import { all, put, call, takeLatest } from '@redux-saga/core/effects'
 import { mapsSlice } from '../reducers/maps';
-import { getAllMaps, getMapById } from '../services/mapsServices';
+import { addCommentOnCurrentMap, getAllMaps, getMapById } from '../services/mapsServices';
 
 function* onFetchAllMaps() {
     try {
@@ -22,9 +22,20 @@ function* onFetchMapById(action) {
     }
 }
 
+function* onAddCommentOnCurrentMap(action) {
+    try {
+        const result = yield call(addCommentOnCurrentMap, action.payload);
+
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export default function* trucksSaga() {
     yield all([
         takeLatest(mapsSlice.actions.fetchAllMaps, onFetchAllMaps),
         takeLatest(mapsSlice.actions.fetchMapById, onFetchMapById),
+        takeLatest(mapsSlice.actions.addCommentOnCurrentMap, onAddCommentOnCurrentMap),
     ])
 }

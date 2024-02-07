@@ -13,3 +13,13 @@ export const getMapById = async (mapId) => {
 
     return result;
 }
+
+export const addCommentOnCurrentMap = async (mapId, mapData) => {
+    let result = await fetch(`${baseUrl}/${mapId}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(mapData)
+    })
+}

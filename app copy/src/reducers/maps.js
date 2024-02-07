@@ -16,6 +16,7 @@ export const mapsSlice = createSlice({
         fetchMapById: () => {},
         setMapById: (state, action) => {
             state.mapById = action.payload
-        }
+        },
+        addCommentOnCurrentMap: () => {}
     }
 })

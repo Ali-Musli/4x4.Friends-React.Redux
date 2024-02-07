@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useReduxAction } from "../../hooks/useReduxAction";
 import { useReduxState } from "../../hooks/useReduxState";
@@ -8,13 +8,34 @@ import style from "./MapDetail.module.css"
 
 function MapsDetails() {
     let { mapId } = useParams();
+    const [isAddBtnClick, setIsAddBtnClick] = useState(false);
+    const [newComment, setNewComment] = useState('');
 
+    const addComment = useReduxAction(mapsSlice.actions.addCommentOnCurrentMap);
     const fetchMapById = useReduxAction(mapsSlice.actions.fetchMapById);
     const currentMap = useReduxState((state) => state.maps.mapById);
 
     useEffect(() => {
         fetchMapById(mapId)
+        setIsAddBtnClick(true)
+        setNewComment('')
     }, [mapId]);
+
+    const onAddBtnClick = () => {
+        setIsAddBtnClick(state => !state);
+        console.log(isAddBtnClick);
+    }
+
+    const onAddNewComment = (e) => {
+        setNewComment(state => e.target.value)
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        addComment(currentMap._id, newComment);
+        setNewComment('')
+        console.log(newComment);
+    }
 
 
     return (
@@ -50,9 +71,16 @@ function MapsDetails() {
                 </div>
             </div>
             <div className={style["main-comments"]}>
-                <div>
-                    <input placeholder="Добваи своя коментар тук..." />
-                    <button>Добави</button>
+                {isAddBtnClick ?
+                    <button onClick={onAddBtnClick}>Добави коментар</button> :
+                    <form onSubmit={onSubmit} className={style["comments-add"]}>
+                        <input placeholder="Добваи своя коментар тук..." value={newComment} onChange={onAddNewComment} />
+                        <button>Добави</button>
+                    </form>
+                }
+
+
+                <div className={style["comments-current"]}>
                     <p>Иван: картата е супер!</p>
                     <p>Пешо: Топ!</p>
                     <p>Иван: Бива!</p>
