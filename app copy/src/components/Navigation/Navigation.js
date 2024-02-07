@@ -1,6 +1,7 @@
 import style from "./Navigation.module.css";
 
 import { Link } from "react-router-dom";
+import LoginPopup from "../Login/Login";
 
 const Navigation = () => {
     return (
@@ -13,7 +14,7 @@ const Navigation = () => {
                 <li className={style["ul-list-item"]}><a>Forum</a></li>
                 <li className={style["ul-list-item"]}><a>Events</a></li>
                 <li className={style["ul-list-item"]}><a>Profile</a></li>
-                <li className={style["ul-list-item"]}><a>Login</a></li>
+                <li className={style["ul-list-item"]}><LoginPopup /></li>
                 <li className={style["ul-list-item"]}><a>Register</a></li>
                 <li className={style["ul-list-item"]}><a>Logout</a></li>
             </ul>
