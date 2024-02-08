@@ -1,7 +1,7 @@
 import style from "./Navigation.module.css";
 
 import { Link } from "react-router-dom";
-import LoginPopup from "../Login/Login";
+import LoginPopup from "../AuthPopUp/AuthPopUp";
 
 const Navigation = () => {
     const user = false // to be change when add user in redux!
