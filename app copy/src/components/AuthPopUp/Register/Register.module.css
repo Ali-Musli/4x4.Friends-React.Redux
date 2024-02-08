@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 14px;
     justify-content: center;
     width: 600px;
     height: 600px;
@@ -62,7 +62,7 @@
 }
 
 .div-btn {
-    margin-top: 55px;
+    margin-top: 35px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -104,4 +104,8 @@
     box-shadow: 1px 0px 8px 0px rgba(0, 0, 0, 0.81);
     -webkit-box-shadow: 1px 0px 8px 0px rgba(0, 0, 0, 0.81);
     -moz-box-shadow: 1px 0px 8px 0px rgba(0, 0, 0, 0.81);
+}
+
+.account-exist {
+    color: black;
 }
