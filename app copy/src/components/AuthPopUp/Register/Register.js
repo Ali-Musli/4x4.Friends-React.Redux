@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import style from "./Register.module.css"
+import style from "./Register.module.css";
 
 const Register = ({ isRegisterShow }) => {
     const [confirmPass, setConfirmPass] = useState('');
