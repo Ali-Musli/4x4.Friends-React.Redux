@@ -4,23 +4,26 @@ import Login from './Login/Login';
 import Register from './Register/Register';
 
 const LoginPopup = () => {
-    const [showPopup, setShowPopup] = useState(false);
-    const [showRegisterPopUp, setShowRegisterPopUp] = useState(false)
+    const [view, setView] = useState("");
 
-    const isLoginShow = () => {
-        setShowPopup(state => !state)
-    }
+    const changeView = (event) => {
+        let view = event.target.innerHTML;
 
-    const isRegisterShow = () => {
-        setShowRegisterPopUp(state => !state)
+        if(view === "Login"){
+            setView("login")
+        }else if(view === "Register") {
+            setView("register")
+        }else {
+            setView("")
+        }
     }
 
     return (
         <div className={style["login-popup-wrapper"]}>
-            <button className={style["main-btn"]} onClick={() => setShowPopup(true)}>Login</button>
-            <button className={style["main-btn"]} onClick={() => setShowRegisterPopUp(true)}>Register</button>
-            {showPopup && <Login isLoginShow={isLoginShow} setShowRegisterPopUp={setShowRegisterPopUp} />}
-            {showRegisterPopUp && <Register isRegisterShow={isRegisterShow} isLoginShow={isLoginShow} />}
+            <button className={style["main-btn"]} onClick={changeView}>Login</button>
+            <button className={style["main-btn"]} onClick={changeView}>Register</button>
+            {view === "login" && <Login changeView={changeView} />}
+            {view === "register" && <Register  changeView={changeView} />}
         </div>
     );
 };

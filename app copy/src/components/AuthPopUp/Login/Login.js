@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import style from "./Login.module.css"
 
-const Login = ({ isLoginShow, setShowRegisterPopUp }) => {
-    console.log(isLoginShow);
+const Login = ({ changeView }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -12,7 +11,7 @@ const Login = ({ isLoginShow, setShowRegisterPopUp }) => {
 
     return (
         <>
-            <div className={style["login-overlay"]} onClick={isLoginShow}></div>
+            <div className={style["login-overlay"]} onClick={changeView}></div>
             <div className={style["login-popup"]}>
                 <div className={style["login-popup-inner"]}>
                     <i className="fa-solid fa-user"></i>
@@ -43,10 +42,10 @@ const Login = ({ isLoginShow, setShowRegisterPopUp }) => {
                         </div>
                     </form>
                     <div className={style["div-btn"]}>
-                        <button className={style["cls-btn"]} onClick={isLoginShow}>Close</button>
+                        <button className={style["cls-btn"]} onClick={changeView}>Close</button>
                         <button className={style["auth-btn"]} onClick={handleLogin}>Login</button>
                     </div>
-                    <p className={style["account-exist"]}>Don't have an account yet? <a onClick={setShowRegisterPopUp} className={style["existProfile-btn"]}> Register</a></p>
+                    <p className={style["account-exist"]}>Don't have an account yet? <a onClick={changeView} className={style["existProfile-btn"]}>Register</a></p>
                 </div>
             </div>
         </>
