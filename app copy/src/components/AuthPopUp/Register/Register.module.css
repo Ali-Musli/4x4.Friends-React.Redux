@@ -10,7 +10,7 @@
     border-radius: 5px;
 }
 
-.login-popup {
+.register-popup {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
     background-color: rgba(251, 249, 247, 0.468);
 }
 
-.login-overlay {
+.register-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,19 +33,18 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.login-popup-inner {
+.register-popup-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-    justify-content: center;
+    justify-content: space-around;
     width: 600px;
     height: 600px;
     background-color: #ffffff;
     border-radius: 10px;
 }
 
-.login-popup-inner i {
+.register-popup-inner i {
     font-size: 90px;
     color: black;
     border: 1px solid black;
@@ -53,11 +52,33 @@
     border-radius: 5px;
 }
 
-.login-popup-title {
+.register-popup-title {
     color: black;
+    text-transform: uppercase;
+    font-size: 33px;
 }
 
-.label {
+.form {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-item {
+    width: 390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-item-input {
+    padding: 3px;
+    border: 1px solid rgb(26, 26, 209);
+    border-radius: 5px;
+}
+
+.form-item-label {
     color: black;
 }
 
@@ -108,4 +129,9 @@
 
 .account-exist {
     color: black;
+}
+
+.account-exist .existProfile-btn {
+    font-weight: 400;
+    color: blue;
 }

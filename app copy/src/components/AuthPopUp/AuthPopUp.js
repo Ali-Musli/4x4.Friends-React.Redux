@@ -19,8 +19,8 @@ const LoginPopup = () => {
         <div className={style["login-popup-wrapper"]}>
             <button className={style["main-btn"]} onClick={() => setShowPopup(true)}>Login</button>
             <button className={style["main-btn"]} onClick={() => setShowRegisterPopUp(true)}>Register</button>
-            {showPopup && <Login isLoginShow={isLoginShow} />}
-            {showRegisterPopUp && <Register isRegisterShow={isRegisterShow} />}
+            {showPopup && <Login isLoginShow={isLoginShow} setShowRegisterPopUp={setShowRegisterPopUp} />}
+            {showRegisterPopUp && <Register isRegisterShow={isRegisterShow} isLoginShow={isLoginShow} />}
         </div>
     );
 };

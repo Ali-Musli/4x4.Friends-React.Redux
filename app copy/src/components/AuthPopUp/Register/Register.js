@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import style from "./Register.module.css";
 
-const Register = ({ isRegisterShow }) => {
+const Register = ({ isRegisterShow, isLoginShow }) => {
     const [confirmPass, setConfirmPass] = useState('');
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
@@ -14,15 +14,16 @@ const Register = ({ isRegisterShow }) => {
 
     return (
         <>
-            <div className={style["login-overlay"]} onClick={isRegisterShow}></div>
-            <div className={style["login-popup"]}>
-                <div className={style["login-popup-inner"]}>
+            <div className={style["register-overlay"]} onClick={isRegisterShow}></div>
+            <div className={style["register-popup"]}>
+                <div className={style["register-popup-inner"]}>
                     <i className="fa-solid fa-user"></i>
-                    <h2 className={style["login-popup-title"]} >Register</h2>
-                    <form>
-                        <div>
-                            <label className={style["label"]} htmlFor='username'>Username</label>
+                    <h2 className={style["register-popup-title"]} >Register</h2>
+                    <form className={style["form"]}>
+                        <div className={style["form-item"]}>
+                            <label className={style["form-item-label"]} htmlFor='username'>Username:</label>
                             <input
+                                className={style["form-item-input"]}
                                 name='username'
                                 type="text"
                                 placeholder="Username"
@@ -31,9 +32,10 @@ const Register = ({ isRegisterShow }) => {
                             />
                         </div>
 
-                        <div>
-                            <label className={style["label"]} htmlFor='email'>Email</label>
+                        <div className={style["form-item"]}>
+                            <label className={style["form-item-label"]} htmlFor='email'>Email:</label>
                             <input
+                                className={style["form-item-input"]}
                                 name='email'
                                 type="text"
                                 placeholder="Email"
@@ -42,9 +44,10 @@ const Register = ({ isRegisterShow }) => {
                             />
                         </div>
 
-                        <div>
-                            <label className={style["label"]} htmlFor='password'>Password</label>
+                        <div className={style["form-item"]}>
+                            <label className={style["form-item-label"]} htmlFor='password'>Password:</label>
                             <input
+                                className={style["form-item-input"]}
                                 name='password'
                                 type="password"
                                 placeholder="********"
@@ -53,9 +56,10 @@ const Register = ({ isRegisterShow }) => {
                             />
                         </div>
 
-                        <div>
-                            <label className={style["label"]} htmlFor='rePassword'>Repeat Password</label>
+                        <div className={style["form-item"]}>
+                            <label className={style["form-item-label"]} htmlFor='rePassword'>Repeat Password:</label>
                             <input
+                                className={style["form-item-input"]}
                                 name='rePassword'
                                 type="text"
                                 placeholder="********"
@@ -68,7 +72,7 @@ const Register = ({ isRegisterShow }) => {
                         <button className={style["cls-btn"]} onClick={isRegisterShow}>Close</button>
                         <button className={style["auth-btn"]} onClick={handleRegister}>Register</button>
                     </div>
-                    <p className={style["account-exist"]}>You already have account? <a>Login</a></p>
+                    <p className={style["account-exist"]}>You already have account? <a onClick={isLoginShow} className={style["existProfile-btn"]}>Login</a></p>
                 </div>
             </div>
         </>
