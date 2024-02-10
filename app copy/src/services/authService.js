@@ -12,5 +12,10 @@ export const login = async (data) => {
     result = await result.json();
     console.log(result);
 
+    if(result.accessToken) {
+        console.log(result.accessToken);
+        localStorage.setItem("auth", JSON.stringify(result))
+    }
+
     return result;
 }

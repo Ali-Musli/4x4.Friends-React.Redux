@@ -1,6 +1,6 @@
 import { all, put, call, takeLatest } from '@redux-saga/core/effects'
 import { authSlice } from '../reducers/auth';
-import { login } from '../services/auth';
+import { login } from '../services/authService';
 
 function* onFetchLogin(action) {
     try {
