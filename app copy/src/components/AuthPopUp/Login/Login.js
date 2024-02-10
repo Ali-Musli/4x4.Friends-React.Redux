@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
+import { useReduxAction } from '../../../hooks/useReduxAction';
+import { authSlice } from '../../../reducers/auth';
 import style from "./Login.module.css"
 
 const Login = ({ changeView }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const login = useReduxAction(authSlice.actions.fetchLogin);
+    const navigate = useNavigate()
+
     const handleLogin = () => {
         console.log('Logging in with:', { email, password });
+        
+        login({email, password});
+        changeView("")
     };
 
     return (

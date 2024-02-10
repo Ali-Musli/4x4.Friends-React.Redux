@@ -7,13 +7,18 @@ const LoginPopup = () => {
     const [view, setView] = useState("");
 
     const changeView = (event) => {
-        let view = event.target.innerHTML;
 
-        if(view === "Login"){
-            setView("login")
-        }else if(view === "Register") {
-            setView("register")
-        }else {
+        if (event.target) {
+            let view = event.target.innerHTML;
+
+            if (view === "Login") {
+                setView("login")
+            } else if (view === "Register") {
+                setView("register")
+            } else {
+                setView("")
+            }
+        }else{
             setView("")
         }
     }
@@ -23,7 +28,7 @@ const LoginPopup = () => {
             <button className={style["main-btn"]} onClick={changeView}>Login</button>
             <button className={style["main-btn"]} onClick={changeView}>Register</button>
             {view === "login" && <Login changeView={changeView} />}
-            {view === "register" && <Register  changeView={changeView} />}
+            {view === "register" && <Register changeView={changeView} />}
         </div>
     );
 };
