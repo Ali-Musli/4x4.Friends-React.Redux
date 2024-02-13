@@ -10,10 +10,10 @@ const Navigation = () => {
     let isAuth = () => {
         if(!!user.email){
             console.log("if");
-            return !!user.email
+            return !!user.email;
         }else{
             let localUser = localStorage.getItem("auth");
-            return !!localUser
+            return !!localUser;
         }
     }
 
