@@ -25,7 +25,7 @@ const Catalog = () => {
                     })
                 }
             </div>
-            <Paginationn />
+            <Paginationn />;
         </section>
     )
 }
