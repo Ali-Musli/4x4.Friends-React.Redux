@@ -14,7 +14,7 @@ export const login = async (data) => {
 
     if(result.accessToken) {
         console.log(result.accessToken);
-        localStorage.setItem("auth", JSON.stringify(result))
+        localStorage.setItem("auth", JSON.stringify(result));
     }
 
     return result;

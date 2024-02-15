@@ -13,4 +13,4 @@ export const authSlice = createSlice({
             state.user = action.payload
         },
     }
-})
+});
