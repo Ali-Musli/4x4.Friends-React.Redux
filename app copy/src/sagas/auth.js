@@ -7,7 +7,7 @@ function* onFetchLogin(action) {
         const result = yield call(login, action.payload);
 
         console.log(result);
-        yield put(authSlice.actions.setUser(result))
+        yield put(authSlice.actions.setUser(result));
     } catch (error) {
         console.log(error);
     }
@@ -16,5 +16,5 @@ function* onFetchLogin(action) {
 export default function* trucksSaga() {
     yield all([
         takeLatest(authSlice.actions.fetchLogin, onFetchLogin),
-    ])
+    ]);
 }
