@@ -1,3 +1,13 @@
+const token = () => {
+    const tokenFromLocalStorage = localStorage.getItem('auth')
+    if(tokenFromLocalStorage){
+        const auth = JSON.parse(tokenFromLocalStorage);
+        return auth.accessToken
+    }else{
+        return null
+    }
+}
+
 const baseUrl = "http://localhost:3030/users";
 
 export const login = async (data) => {
@@ -18,4 +28,19 @@ export const login = async (data) => {
     }
 
     return result;
+}
+
+export const logout = async () => {
+    let result = await fetch(`${baseUrl}/logout`, {
+        method: "GET",
+        headers: {
+            'X-Authorization': token()
+        }
+    });
+
+    if(result.ok) {
+        localStorage.clear()
+    }
+
+    return result.ok;
 }

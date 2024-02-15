@@ -3,9 +3,12 @@ import style from "./Navigation.module.css";
 import { Link } from "react-router-dom";
 import LoginPopup from "../AuthPopUp/AuthPopUp";
 import { useReduxState } from "../../hooks/useReduxState";
+import { useReduxAction } from "../../hooks/useReduxAction";
+import { authSlice } from "../../reducers/auth";
 
 const Navigation = () => {
     const user = useReduxState((state) => state.auth.user);
+    const logout = useReduxAction(authSlice.actions.removeUser);
 
     let isAuth = () => {
         if(!!user.email){
@@ -32,7 +35,7 @@ const Navigation = () => {
                 {auth &&
                     <>
                         <li className={style["ul-list-item"]}><a>Profile</a></li>
-                        <li className={style["ul-list-item"]}><a>Logout</a></li>
+                        <li className={style["ul-list-item"]}><a onClick={() => logout()}>Logout</a></li>
                     </>
                 }
             </ul>

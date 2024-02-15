@@ -9,7 +9,6 @@ const Login = ({ changeView }) => {
     const [password, setPassword] = useState('');
 
     const login = useReduxAction(authSlice.actions.fetchLogin);
-    const navigate = useNavigate()
 
     const handleLogin = () => {
         console.log('Logging in with:', { email, password });
