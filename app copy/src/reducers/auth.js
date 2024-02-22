@@ -10,6 +10,7 @@ export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
+        fetchRegister: () => {},
         fetchLogin: () => {},
         setUser: (state, action) => {
             state.user = action.payload

@@ -10,6 +10,18 @@ const token = () => {
 
 const baseUrl = "http://localhost:3030/users";
 
+export const register = async(data) => {
+    let result = await fetch(`${baseUrl}/register`, {
+        method: "POST",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+
+    console.log(result);
+}
+
 export const login = async (data) => {
     let result = await fetch(`${baseUrl}/login`, {
         method: "POST",
