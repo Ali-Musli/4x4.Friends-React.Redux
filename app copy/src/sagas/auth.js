@@ -1,6 +1,16 @@
 import { all, put, call, takeLatest } from '@redux-saga/core/effects'
 import { authSlice } from '../reducers/auth';
-import { login, logout } from '../services/authService';
+import { login, logout, register } from '../services/authService';
+
+function* onFetchRegister(action) {
+    try {
+        const result = yield call(register, action.payload);
+
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 function* onFetchLogin(action) {
     try {
