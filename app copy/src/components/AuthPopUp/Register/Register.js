@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useReduxAction } from '../../../hooks/useReduxAction';
+import { authSlice } from '../../../reducers/auth';
 
 import style from "./Register.module.css";
 
@@ -8,8 +10,12 @@ const Register = ({ changeView }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    const register = useReduxAction(authSlice.actions.fetchRegister);
+
     const handleRegister = () => {
-        console.log('Register in with:', { email, username, password, confirmPass });
+        console.log('Register in with:', { email, password, username });
+
+        register({email, username, password, confirmPass})
     };
 
     return (

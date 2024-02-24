@@ -7,6 +7,7 @@ function* onFetchRegister(action) {
         const result = yield call(register, action.payload);
 
         console.log(result);
+        yield put(authSlice.actions.setUser(result))
     } catch (error) {
         console.log(error);
     }
@@ -38,6 +39,7 @@ function* onLogout() {
 
 export default function* trucksSaga() {
     yield all([
+        takeLatest(authSlice.actions.fetchRegister, onFetchRegister),
         takeLatest(authSlice.actions.fetchLogin, onFetchLogin),
         takeLatest(authSlice.actions.removeUser, onLogout),
     ]);

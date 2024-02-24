@@ -18,8 +18,15 @@ export const register = async(data) => {
         },
         body: JSON.stringify(data)
     })
+    
+    result = await result.json();
 
-    console.log(result);
+    if(result.accessToken) {
+        console.log(result.accessToken);
+        localStorage.setItem("auth", JSON.stringify(result));
+    }
+
+    return result
 }
 
 export const login = async (data) => {
@@ -32,7 +39,6 @@ export const login = async (data) => {
     })
 
     result = await result.json();
-    console.log(result);
 
     if(result.accessToken) {
         console.log(result.accessToken);
