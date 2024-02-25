@@ -5,11 +5,26 @@ import LoginPopup from "../AuthPopUp/AuthPopUp";
 import { useReduxState } from "../../hooks/useReduxState";
 import { useReduxAction } from "../../hooks/useReduxAction";
 import { authSlice } from "../../reducers/auth";
+import { useEffect, useState } from "react";
+import { errorSlice } from "../../reducers/errors";
 
 const Navigation = () => {
     const user = useReduxState((state) => state.auth.user);
     const error = useReduxState((state) => state.error.error);
+    const clearError = useReduxAction(errorSlice.actions.clearError)
     const logout = useReduxAction(authSlice.actions.removeUser);
+
+    const [isErrorVisible, setErrorVisible] = useState(false);
+
+    useEffect(() => {
+        setErrorVisible(true);
+        const timer = setTimeout(() => {
+            setErrorVisible(false);
+            clearError()
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [error])
 
     let isAuth = () => {
         if (!!user.email) {
@@ -19,7 +34,7 @@ const Navigation = () => {
             let localUser = localStorage.getItem("auth");
             return !!localUser;
         }
-    }
+    };
 
     let auth = isAuth();
 
@@ -40,7 +55,7 @@ const Navigation = () => {
                     </>
                 }
             </ul>
-            {error && <p className={style["errorMessage"]}>{error}</p>}
+            {error && isErrorVisible && <p className={style["errorMessage"]}>{error}</p>}
         </nav>
     );
 }
