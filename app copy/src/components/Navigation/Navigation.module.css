@@ -38,3 +38,10 @@
     cursor: pointer;
     color: black;
 }
+
+.errorMessage {
+    position: absolute;
+    right: 300px;
+    font-size: 20px;
+    color: red;
+}

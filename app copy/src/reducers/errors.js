@@ -12,6 +12,9 @@ export const errorSlice = createSlice({
     reducers: {
         setError: (state, action) => {
             state.error = action.payload;
+        },
+        clearError: (state, action) => {
+            state.error = ""
         }
     }
 });

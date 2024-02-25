@@ -8,13 +8,14 @@ import { authSlice } from "../../reducers/auth";
 
 const Navigation = () => {
     const user = useReduxState((state) => state.auth.user);
+    const error = useReduxState((state) => state.error.error);
     const logout = useReduxAction(authSlice.actions.removeUser);
 
     let isAuth = () => {
-        if(!!user.email){
+        if (!!user.email) {
             console.log("if");
             return !!user.email;
-        }else{
+        } else {
             let localUser = localStorage.getItem("auth");
             return !!localUser;
         }
@@ -39,6 +40,7 @@ const Navigation = () => {
                     </>
                 }
             </ul>
+            {error && <p className={style["errorMessage"]}>{error}</p>}
         </nav>
     );
 }
