@@ -1,5 +1,6 @@
 import { all, put, call, takeLatest } from '@redux-saga/core/effects'
 import { authSlice } from '../reducers/auth';
+import { errorSlice } from '../reducers/errors';
 import { login, logout, register } from '../services/authService';
 
 function* onFetchRegister(action) {
@@ -18,7 +19,13 @@ function* onFetchLogin(action) {
         const result = yield call(login, action.payload);
 
         console.log(result);
-        yield put(authSlice.actions.setUser(result));
+
+        if(result.message){
+            yield put(errorSlice.actions.setError(result.message))
+        }else{
+            yield put(authSlice.actions.setUser(result));
+        }
+        
     } catch (error) {
         console.log(error);
     }

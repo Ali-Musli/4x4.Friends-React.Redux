@@ -13,7 +13,7 @@ const Maps = () => {
     }, [])
     return (
         <section className={style["section-main"]}>
-            <h2 className={style["section-main-title"]}>Our Favorite <spam className={style["title-span"]}>Trail Guides</spam> Across the Country</h2>
+            <h2 className={style["section-main-title"]}>Our Favorite <span className={style["title-span"]}>Trail Guides</span> Across the Country</h2>
             <div>
                 <Carousel fade="true" id={style["carusel"]}>
                     <Carousel.Item id={style["carusel-item"]}>

@@ -71,7 +71,7 @@ const PopupDetails = ({imgUrl, title, price, mileage, location, horsePower, gas,
                                 {
                                     extras.map((extra) => {
                                         return (
-                                            <li>{extra}</li>
+                                            <li key={extra}>{extra}</li>
                                         )
                                     })
                                 }

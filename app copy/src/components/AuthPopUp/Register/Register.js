@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useReduxAction } from '../../../hooks/useReduxAction';
 import { authSlice } from '../../../reducers/auth';
+import { errorSlice } from '../../../reducers/errors';
 
 import style from "./Register.module.css";
 
@@ -11,9 +12,15 @@ const Register = ({ changeView }) => {
     const [password, setPassword] = useState('');
 
     const register = useReduxAction(authSlice.actions.fetchRegister);
+    const setError = useReduxAction(errorSlice.actions.setError);
 
     const handleRegister = () => {
         console.log('Register in with:', { email, password, username });
+
+        if(password !== confirmPass){
+            setError("Password and confirm password, should be same")
+            return; 
+        }
 
         register({email, username, password, confirmPass})
     };

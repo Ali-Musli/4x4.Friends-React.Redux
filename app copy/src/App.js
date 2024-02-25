@@ -10,13 +10,13 @@ import store from './redux';
 import Maps from './components/Maps/Maps';
 import MapsDetails from './components/MapDetails/MapDetail';
 
-
 function App() {
   return (
     <Provider store={store}>
       <div className="app">
         <Navigation />
         <ScrollToTop />
+        
         <Routes>
           <Route path='/' element={<WelcomePage />} />
           <Route path='/catalog' element={<Catalog />} />
