@@ -19,8 +19,7 @@
 }
 
 .items {
-    width: 1220px;
+    width: 1500px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
 }

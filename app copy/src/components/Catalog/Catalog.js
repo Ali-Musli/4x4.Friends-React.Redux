@@ -1,4 +1,5 @@
 import CatalogItem from "./CatalogItem/CatalogItem";
+import FilterField from "./FilterField/FilterField"
 import style from "./Catalog.module.css";
 import Paginationn from "../Pagination/Pagination";
 import { useReduxAction } from "../../hooks/useReduxAction";
@@ -17,13 +18,17 @@ const Catalog = () => {
         <section className={style["section-catalog"]}>
             <input className={style["search"]} placeholder="Search..."></input>
             <div className={style["items"]}>
-                {
-                    trucks.map((item) => {
-                        return (
-                            <CatalogItem key={item.id} {...item} />
-                        )
-                    })
-                }
+                <FilterField />
+
+                <div>
+                    {
+                        trucks.map((item) => {
+                            return (
+                                <CatalogItem key={item.id} {...item} />
+                            )
+                        })
+                    }
+                </div>
             </div>
             <Paginationn />;
         </section>
