@@ -18,3 +18,7 @@
     align-items: center;
     gap: 20px;
 }
+
+.form-item {
+    background-color: #d1d4c9;
+}

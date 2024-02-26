@@ -23,7 +23,7 @@ const FilterField = () => {
     return (
         <div className={style["main"]}>
             <form onSubmit={onSubmit} className={style["form"]}>
-                <label>
+                <label className={style["form-item"]}>
                     Марка:
                     <select value={formData.brand} onChange={changeHandler} name="brand" id="brand">
                         <option value="volvo">Volvo</option>
@@ -33,7 +33,7 @@ const FilterField = () => {
                     </select>
                 </label>
 
-                <label>
+                <label className={style["form-item"]}>
                     Цена от:
                     <input
                         name="priceFrom"
@@ -43,7 +43,7 @@ const FilterField = () => {
                     />
                 </label>
 
-                <label>
+                <label className={style["form-item"]}>
                     Цена до:
                     <input
                         name="priceTo"
@@ -53,7 +53,7 @@ const FilterField = () => {
                     />
                 </label>
 
-                <label>
+                <label className={style["form-item"]}>
                     Локация:
                     <select value={formData.location} onChange={changeHandler} name="location" id="location">
                         <option value="sofia">София</option>
@@ -63,7 +63,7 @@ const FilterField = () => {
                     </select>
                 </label>
 
-                <label>
+                <label className={style["form-item"]}>
                     Скорости
                     <select name="gear" value={formData.gear} onChange={changeHandler}>
                         <option value="manuel">Ръчни</option>
@@ -71,7 +71,7 @@ const FilterField = () => {
                     </select>
                 </label>
 
-                <label>
+                <label className={style["form-item"]}>
                     Година от:
                     <input
                         name="yearFrom"
@@ -81,7 +81,7 @@ const FilterField = () => {
                     />
                 </label>
 
-                <label>
+                <label className={style["form-item"]}>
                     Година до:
                     <input
                         name="yearTo"
