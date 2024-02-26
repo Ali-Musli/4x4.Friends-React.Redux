@@ -1,12 +1,31 @@
+import { useState } from "react";
 import style from "./FilterField.module.css"
 
 const FilterField = () => {
+    const [formData, setFormData] = useState({
+        brand: "volvo",
+        priceFrom: 0,
+        priceTo: 1,
+        location: "sofia",
+        gear: "manuel",
+        yearFrom: 1990,
+        yearTo: 2024
+    });
+
+    const changeHandler = (e) => {
+        setFormData(state => ({ ...state, [e.target.name]: e.target.value }));
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData);
+    }
     return (
         <div className={style["main"]}>
-            <form className={style["form"]}>
+            <form onSubmit={onSubmit} className={style["form"]}>
                 <label>
                     Марка:
-                    <select name="cars" id="cars">
+                    <select value={formData.brand} onChange={changeHandler} name="brand" id="brand">
                         <option value="volvo">Volvo</option>
                         <option value="saab">Saab</option>
                         <option value="mercedes">Mercedes</option>
@@ -17,46 +36,58 @@ const FilterField = () => {
                 <label>
                     Цена от:
                     <input
+                        name="priceFrom"
                         type="number"
+                        value={formData.priceFrom}
+                        onChange={changeHandler}
                     />
                 </label>
 
                 <label>
                     Цена до:
                     <input
+                        name="priceTo"
                         type="number"
+                        value={formData.priceTo}
+                        onChange={changeHandler}
                     />
                 </label>
 
                 <label>
                     Локация:
-                    <select name="cars" id="cars">
-                        <option value="volvo">София</option>
-                        <option value="saab">Пловдив</option>
-                        <option value="mercedes">Варна</option>
-                        <option value="audi">Гоце Делчев</option>
+                    <select value={formData.location} onChange={changeHandler} name="location" id="location">
+                        <option value="sofia">София</option>
+                        <option value="plovdiv">Пловдив</option>
+                        <option value="varna">Варна</option>
+                        <option value="goce">Гоце Делчев</option>
                     </select>
                 </label>
 
-                <div>
-                    <p>Скорости</p>
-                    <input type="radio" id="html" name="fav_language" value="HTML" />
-                    <label for="html">Ръчни</label>
-                    <input type="radio" id="css" name="fav_language" value="CSS" />
-                    <label for="css">Автоматични</label>
-                </div>
+                <label>
+                    Скорости
+                    <select name="gear" value={formData.gear} onChange={changeHandler}>
+                        <option value="manuel">Ръчни</option>
+                        <option value="automatic">Автоматични</option>
+                    </select>
+                </label>
 
                 <label>
                     Година от:
                     <input
+                        name="yearFrom"
                         type="number"
+                        value={formData.yearFrom}
+                        onChange={changeHandler}
                     />
                 </label>
 
                 <label>
                     Година до:
                     <input
+                        name="yearTo"
                         type="number"
+                        value={formData.yearTo}
+                        onChange={changeHandler}
                     />
                 </label>
 
