@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
 import { useReduxAction } from '../../../hooks/useReduxAction';
 import { authSlice } from '../../../reducers/auth';
-import style from "./Login.module.css"
+import style from "./Login.module.css";
 
 const Login = ({ changeView }) => {
     const [email, setEmail] = useState('');
@@ -14,7 +13,7 @@ const Login = ({ changeView }) => {
         console.log('Logging in with:', { email, password });
         
         login({email, password});
-        changeView("")
+        changeView("");
     };
 
     return (
