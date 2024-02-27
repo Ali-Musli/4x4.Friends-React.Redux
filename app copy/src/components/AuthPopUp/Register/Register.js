@@ -18,11 +18,11 @@ const Register = ({ changeView }) => {
         console.log('Register in with:', { email, password, username });
 
         if(password !== confirmPass){
-            setError("Password and confirm password, should be same")
+            setError("Password and confirm password, should be same");
             return; 
         }
 
-        register({email, username, password, confirmPass})
+        register({email, username, password, confirmPass});
     };
 
     return (
