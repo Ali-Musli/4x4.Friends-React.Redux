@@ -1,11 +1,6 @@
-import { useEffect, useState } from "react";
-import Popup from "../../Popup/Popup";
 import style from "./CatalogItem.module.css";
-import Gallery from "react-image-gallery";
 import 'react-image-gallery/styles/css/image-gallery.css'
 import PopupDetails from "./PopupDetails/PopupDetails";
-import { useReduxAction } from "../../../hooks/useReduxAction";
-import { trucksSlice } from "../../../reducers/trucks";
 
 const Car = ({ imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id, images }) => {
     const data = {imgUrl, title, price, mileage, location, horsePower, gas, carData, extras, gears, _id, images};
