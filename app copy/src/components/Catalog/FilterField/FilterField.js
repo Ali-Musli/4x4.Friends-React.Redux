@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useReduxAction } from "../../../hooks/useReduxAction";
 import { useReduxState } from "../../../hooks/useReduxState";
+import { trucksSlice } from "../../../reducers/trucks";
 import style from "./FilterField.module.css"
 
 const FilterField = () => {
     const trucks = useReduxState((state) => state.trucks.trucks);
+    const setTrucks = useReduxAction(trucksSlice.actions.setTrucks);
     const [formData, setFormData] = useState({
         brand: "volvo",
         priceFrom: 0,
@@ -26,13 +29,28 @@ const FilterField = () => {
     }
 
     const filterData = (text) => {
+        const excludedFields = ["extras", "images"]
         const filteredData = trucks.filter(item =>
-          item['location'].toLowerCase().includes(text.toLowerCase())
+          Object.keys(item).some(key =>
+            !excludedFields.includes(key) &&
+            String(item[key]).toLowerCase().includes(text.toLowerCase())
+          )
         );
+
+        setTrucks(filteredData);
 
         console.log(filteredData);
         // setData(filteredData);
       };
+
+    // const filterData = (text) => {
+    //     const filteredData = trucks.filter(item =>
+    //       item['location'].toLowerCase().includes(text.toLowerCase())
+    //     );
+
+    //     console.log(filteredData);
+    //     setData(filteredData);
+    //   };
     return (
         <div className={style["main"]}>
             <h2 className={style["main-title"]}>Търсене</h2>
