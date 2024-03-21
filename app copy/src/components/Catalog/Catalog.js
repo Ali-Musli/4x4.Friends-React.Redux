@@ -20,13 +20,17 @@ const Catalog = () => {
             <div className={style["items"]}>
                 <FilterField />
 
-                <div>
+                <div className={style["items-content"]}>
                     {
-                        trucks.map((item) => {
+                        trucks && trucks.map((item) => {
                             return (
                                 <CatalogItem key={item.id} {...item} />
                             )
                         })
+                    }
+
+                    {
+                        trucks.length === 0 && <h1>No trucks in this location</h1>
                     }
                 </div>
             </div>

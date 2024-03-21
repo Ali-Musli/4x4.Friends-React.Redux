@@ -7,6 +7,7 @@ import style from "./FilterField.module.css"
 const FilterField = () => {
     const trucks = useReduxState((state) => state.trucks.trucks);
     const setTrucks = useReduxAction(trucksSlice.actions.setTrucks);
+
     const [formData, setFormData] = useState({
         brand: "volvo",
         priceFrom: 0,
