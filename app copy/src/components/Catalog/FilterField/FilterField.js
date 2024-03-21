@@ -43,15 +43,6 @@ const FilterField = () => {
         console.log(filteredData);
         // setData(filteredData);
       };
-
-    // const filterData = (text) => {
-    //     const filteredData = trucks.filter(item =>
-    //       item['location'].toLowerCase().includes(text.toLowerCase())
-    //     );
-
-    //     console.log(filteredData);
-    //     setData(filteredData);
-    //   };
     return (
         <div className={style["main"]}>
             <h2 className={style["main-title"]}>Търсене</h2>
