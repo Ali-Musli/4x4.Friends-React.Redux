@@ -55,6 +55,7 @@ const FilterField = () => {
     return (
         <div className={style["main"]}>
             <h2 className={style["main-title"]}>Търсене</h2>
+            <p>за момента търси само по Локация</p>
             <form onSubmit={onSubmit} className={style["form"]}>
                 <label className={style["form-item"]}>
                     Марка:
