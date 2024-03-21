@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useReduxState } from "../../../hooks/useReduxState";
 import style from "./FilterField.module.css"
 
 const FilterField = () => {
+    const trucks = useReduxState((state) => state.trucks.trucks);
     const [formData, setFormData] = useState({
         brand: "volvo",
         priceFrom: 0,
@@ -19,9 +21,21 @@ const FilterField = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
+        console.log(trucks);
+        filterData(formData.location)
     }
+
+    const filterData = (text) => {
+        const filteredData = trucks.filter(item =>
+          item['location'].toLowerCase().includes(text.toLowerCase())
+        );
+
+        console.log(filteredData);
+        // setData(filteredData);
+      };
     return (
         <div className={style["main"]}>
+            <h2 className={style["main-title"]}>Търсене</h2>
             <form onSubmit={onSubmit} className={style["form"]}>
                 <label className={style["form-item"]}>
                     Марка:
@@ -91,7 +105,7 @@ const FilterField = () => {
                     />
                 </label>
 
-                <button>Филтрирай</button>
+                <button className={style["form-btn"]}>Филтрирай</button>
             </form>
         </div>
     )
